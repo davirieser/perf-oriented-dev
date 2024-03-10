@@ -1,0 +1,262 @@
+{
+    "name": "delannoy",
+    "args": [
+        "12"
+    ],
+    "repetitions": 10,
+    "outputs": {
+        "output[0]": "Verification: OK\n",
+        "output[1]": "Verification: OK\n",
+        "output[2]": "Verification: OK\n",
+        "output[3]": "Verification: OK\n",
+        "output[4]": "Verification: OK\n",
+        "output[5]": "Verification: OK\n",
+        "output[6]": "Verification: OK\n",
+        "output[7]": "Verification: OK\n",
+        "output[8]": "Verification: OK\n",
+        "output[9]": "Verification: OK\n"
+    },
+    "squared_differences": {
+        "Real Time": 0.00024000000000000044,
+        "User Time": 0.00025000000000000044,
+        "System Time": 0.0,
+        "Max. Memory": 11502.399999999998
+    },
+    "standard_deviation": {
+        "Real Time": 0.005163977794943227,
+        "User Time": 0.0052704627669473035,
+        "System Time": 0.0,
+        "Max. Memory": 35.74974747385559
+    },
+    "variance": {
+        "Real Time": 2.6666666666666714e-05,
+        "User Time": 2.7777777777777827e-05,
+        "System Time": 0.0,
+        "Max. Memory": 1278.0444444444443
+    },
+    "mean": {
+        "Real Time": 0.556,
+        "User Time": 0.555,
+        "System Time": 0.0,
+        "Max. Memory": 1496.4
+    },
+    "time_stamp": "17:15:02 10.03.2024"
+}
+{
+    "name": "filegen",
+    "args": [
+        "5",
+        "25",
+        "1024000",
+        "2048000"
+    ],
+    "repetitions": 10,
+    "outputs": {
+        "output[0]": "",
+        "output[1]": "",
+        "output[2]": "",
+        "output[3]": "",
+        "output[4]": "",
+        "output[5]": "",
+        "output[6]": "",
+        "output[7]": "",
+        "output[8]": "",
+        "output[9]": ""
+    },
+    "squared_differences": {
+        "Real Time": 0.0038000000000000065,
+        "User Time": 0.0024899999999999974,
+        "System Time": 0.003050000000000001,
+        "Max. Memory": 21230.399999999998
+    },
+    "standard_deviation": {
+        "Real Time": 0.02054804667656327,
+        "User Time": 0.01663329993316619,
+        "System Time": 0.018408935028645438,
+        "Max. Memory": 48.568851472248475
+    },
+    "variance": {
+        "Real Time": 0.0004222222222222229,
+        "User Time": 0.0002766666666666664,
+        "System Time": 0.000338888888888889,
+        "Max. Memory": 2358.933333333333
+    },
+    "mean": {
+        "Real Time": 1.02,
+        "User Time": 0.909,
+        "System Time": 0.10499999999999998,
+        "Max. Memory": 3699.6
+    },
+    "time_stamp": "17:15:07 10.03.2024"
+}
+{
+    "name": "filesearch",
+    "args": [],
+    "repetitions": 10,
+    "outputs": {
+        "output[0]": "The largest file is ./generated/dir_2/file_0 with size 2035462 bytes\n",
+        "output[1]": "The largest file is ./generated/dir_2/file_0 with size 2035462 bytes\n",
+        "output[2]": "The largest file is ./generated/dir_2/file_0 with size 2035462 bytes\n",
+        "output[3]": "The largest file is ./generated/dir_2/file_0 with size 2035462 bytes\n",
+        "output[4]": "The largest file is ./generated/dir_2/file_0 with size 2035462 bytes\n",
+        "output[5]": "The largest file is ./generated/dir_2/file_0 with size 2035462 bytes\n",
+        "output[6]": "The largest file is ./generated/dir_2/file_0 with size 2035462 bytes\n",
+        "output[7]": "The largest file is ./generated/dir_2/file_0 with size 2035462 bytes\n",
+        "output[8]": "The largest file is ./generated/dir_2/file_0 with size 2035462 bytes\n",
+        "output[9]": "The largest file is ./generated/dir_2/file_0 with size 2035462 bytes\n"
+    },
+    "squared_differences": {
+        "Real Time": 0.0,
+        "User Time": 0.0,
+        "System Time": 0.0,
+        "Max. Memory": 59233.600000000006
+    },
+    "standard_deviation": {
+        "Real Time": 0.0,
+        "User Time": 0.0,
+        "System Time": 0.0,
+        "Max. Memory": 81.12651299736179
+    },
+    "variance": {
+        "Real Time": 0.0,
+        "User Time": 0.0,
+        "System Time": 0.0,
+        "Max. Memory": 6581.511111111112
+    },
+    "mean": {
+        "Real Time": 0.0,
+        "User Time": 0.0,
+        "System Time": 0.0,
+        "Max. Memory": 1662.8
+    },
+    "time_stamp": "17:15:18 10.03.2024"
+}
+{
+    "name": "mmul",
+    "args": [],
+    "repetitions": 10,
+    "outputs": {
+        "output[0]": "Verification: OK\n",
+        "output[1]": "Verification: OK\n",
+        "output[2]": "Verification: OK\n",
+        "output[3]": "Verification: OK\n",
+        "output[4]": "Verification: OK\n",
+        "output[5]": "Verification: OK\n",
+        "output[6]": "Verification: OK\n",
+        "output[7]": "Verification: OK\n",
+        "output[8]": "Verification: OK\n",
+        "output[9]": "Verification: OK\n"
+    },
+    "squared_differences": {
+        "Real Time": 0.00020999999999999104,
+        "User Time": 0.00025000000000001155,
+        "System Time": 0.0,
+        "Max. Memory": 29064.0
+    },
+    "standard_deviation": {
+        "Real Time": 0.004830458915396376,
+        "User Time": 0.0052704627669474206,
+        "System Time": 0.0,
+        "Max. Memory": 56.82722352300289
+    },
+    "variance": {
+        "Real Time": 2.3333333333332336e-05,
+        "User Time": 2.777777777777906e-05,
+        "System Time": 0.0,
+        "Max. Memory": 3229.3333333333335
+    },
+    "mean": {
+        "Real Time": 2.603,
+        "User Time": 2.595,
+        "System Time": 0.0,
+        "Max. Memory": 24610.0
+    },
+    "time_stamp": "17:15:18 10.03.2024"
+}
+{
+    "name": "nbody",
+    "args": [],
+    "repetitions": 10,
+    "outputs": {
+        "output[0]": "Verification: OK\n",
+        "output[1]": "Verification: OK\n",
+        "output[2]": "Verification: OK\n",
+        "output[3]": "Verification: OK\n",
+        "output[4]": "Verification: OK\n",
+        "output[5]": "Verification: OK\n",
+        "output[6]": "Verification: OK\n",
+        "output[7]": "Verification: OK\n",
+        "output[8]": "Verification: OK\n",
+        "output[9]": "Verification: OK\n"
+    },
+    "squared_differences": {
+        "Real Time": 0.0006100000000000012,
+        "User Time": 0.0006400000000000011,
+        "System Time": 0.0,
+        "Max. Memory": 25734.400000000005
+    },
+    "standard_deviation": {
+        "Real Time": 0.008232726023485654,
+        "User Time": 0.008432740427115686,
+        "System Time": 0.0,
+        "Max. Memory": 53.47315006410019
+    },
+    "variance": {
+        "Real Time": 6.77777777777779e-05,
+        "User Time": 7.111111111111124e-05,
+        "System Time": 0.0,
+        "Max. Memory": 2859.377777777778
+    },
+    "mean": {
+        "Real Time": 1.273,
+        "User Time": 1.2659999999999998,
+        "System Time": 0.0,
+        "Max. Memory": 2049.6
+    },
+    "time_stamp": "17:15:44 10.03.2024"
+}
+{
+    "name": "qap",
+    "args": [
+        "qap/problems/chr15b.dat"
+    ],
+    "repetitions": 10,
+    "outputs": {
+        "output[0]": "Loading Problem File qap/problems/chr15b.dat ..\n  - problem size: 15\n  - optimum: 7990\nRun solver ...\nDone!\nBest Result: 7990\nVerification: OK\n",
+        "output[1]": "Loading Problem File qap/problems/chr15b.dat ..\n  - problem size: 15\n  - optimum: 7990\nRun solver ...\nDone!\nBest Result: 7990\nVerification: OK\n",
+        "output[2]": "Loading Problem File qap/problems/chr15b.dat ..\n  - problem size: 15\n  - optimum: 7990\nRun solver ...\nDone!\nBest Result: 7990\nVerification: OK\n",
+        "output[3]": "Loading Problem File qap/problems/chr15b.dat ..\n  - problem size: 15\n  - optimum: 7990\nRun solver ...\nDone!\nBest Result: 7990\nVerification: OK\n",
+        "output[4]": "Loading Problem File qap/problems/chr15b.dat ..\n  - problem size: 15\n  - optimum: 7990\nRun solver ...\nDone!\nBest Result: 7990\nVerification: OK\n",
+        "output[5]": "Loading Problem File qap/problems/chr15b.dat ..\n  - problem size: 15\n  - optimum: 7990\nRun solver ...\nDone!\nBest Result: 7990\nVerification: OK\n",
+        "output[6]": "Loading Problem File qap/problems/chr15b.dat ..\n  - problem size: 15\n  - optimum: 7990\nRun solver ...\nDone!\nBest Result: 7990\nVerification: OK\n",
+        "output[7]": "Loading Problem File qap/problems/chr15b.dat ..\n  - problem size: 15\n  - optimum: 7990\nRun solver ...\nDone!\nBest Result: 7990\nVerification: OK\n",
+        "output[8]": "Loading Problem File qap/problems/chr15b.dat ..\n  - problem size: 15\n  - optimum: 7990\nRun solver ...\nDone!\nBest Result: 7990\nVerification: OK\n",
+        "output[9]": "Loading Problem File qap/problems/chr15b.dat ..\n  - problem size: 15\n  - optimum: 7990\nRun solver ...\nDone!\nBest Result: 7990\nVerification: OK\n"
+    },
+    "squared_differences": {
+        "Real Time": 0.0012900000000000023,
+        "User Time": 0.001040000000000002,
+        "System Time": 0.0,
+        "Max. Memory": 18817.6
+    },
+    "standard_deviation": {
+        "Real Time": 0.011972189997378658,
+        "User Time": 0.01074967699773141,
+        "System Time": 0.0,
+        "Max. Memory": 45.725752530105446
+    },
+    "variance": {
+        "Real Time": 0.00014333333333333358,
+        "User Time": 0.00011555555555555578,
+        "System Time": 0.0,
+        "Max. Memory": 2090.8444444444444
+    },
+    "mean": {
+        "Real Time": 1.031,
+        "User Time": 1.0259999999999998,
+        "System Time": 0.0,
+        "Max. Memory": 1729.2
+    },
+    "time_stamp": "17:15:57 10.03.2024"
+}
+
