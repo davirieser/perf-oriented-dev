@@ -1,4 +1,5 @@
 
+import math
 import sys
 import time
 import json
@@ -65,7 +66,10 @@ def measure_program(program):
     program_output = result.stdout.decode("utf-8")
     time_output = result.stderr.decode("utf-8")
 
-    metrics = parse_key_value_pairs(time_output)
+    if (success):
+        metrics = parse_key_value_pairs(time_output)
+    else:
+        metrics = {}
 
     return { "success": success, "metrics": metrics, "output": program_output }
 
@@ -82,28 +86,33 @@ if __name__ == "__main__":
     for program in programs:
         time_stamp = time.strftime("%H:%M:%S %d.%m.%Y", time.localtime())
 
-        print(f"Running Program \"{program['name']}\" {repetitions} times")
+        print(f"Running Program \"{program['name']}\" {repetitions} times: ", end='')
 
-        mean = { metric["name"]: None for metric in metrics }
-        successful_runs = 0
+        fails = []
+        program_results = []
 
         for i in range(repetitions): 
+            print(f"{i}{'..' if i < (repetitions - 1) else ''}", end='', flush=True)
             result = measure_program(program)
-            print(result)
             if (not result["success"]):
-                print(f"> Repetition {i} of Command \"{program['name']}\" did not finish successfully") 
+                fails.append(i)
             else:
-                for metric_name, metric_value in result["metrics"].items():
-                    if (mean[metric_name] == None):
-                        mean[metric_name] = metric_value
-                    else:
-                        mean[metric_name] = (mean[metric_name] * successful_runs + metric_value) / (successful_runs + 1)
-                successful_runs += 1
+                program_results.append(result)
 
-        results.append(program | { "mean": mean, "time_stamp": time_stamp })
+        print()
+        if (len(fails) > 0):
+            print(f"Runs {fails} failed!")
 
+        if(len(program_results) > 0):
+            mean = { metric["name"]: sum([p_result["metrics"][metric["name"]] for p_result in program_results]) / len(program_results) for metric in metrics }
+            squared_differences = { metric["name"] : sum([pow(p_result["metrics"][metric["name"]] - mean[metric["name"]], 2) for p_result in program_results]) for metric in metrics }
+            variance = { metric["name"] : squared_differences[metric["name"]] / (len(program_results) - 1) for metric in metrics }
+            standard_deviation = { metric["name"]: math.sqrt(variance[metric["name"]]) for metric in metrics }
+            outputs = { f"output[{idx}]": p_result["output"] for idx, p_result in enumerate(program_results) }
 
-    json_dumps = [ json.dumps(result, indent=4, skipkeys=True) for result in results ]
+            results.append(program | { "repetitions": repetitions, "outputs": outputs, "squared_differences": squared_differences, "standard_deviation": standard_deviation, "variance": variance, "mean": mean, "time_stamp": time_stamp })
+
+    json_dumps = [ json.dumps(result, indent=4, skipkeys=True) + '\n' for result in results ]
     with open("results.json", 'a+') as f:
         f.writelines(json_dumps)
         f.write('\n')
