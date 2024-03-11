@@ -102,15 +102,22 @@ if __name__ == "__main__":
         print()
         if (len(fails) > 0):
             print(f"Runs {fails} failed!")
+            continue
 
-        if(len(program_results) > 0):
+        outputs = { f"output[{idx}]": p_result["output"] for idx, p_result in enumerate(program_results) }
+
+        if(len(program_results) == 1):
+            mean = { metric["name"]: program_results[0]["metrics"][metric["name"]] for metric in metrics }
+            squared_differences = { metric["name"] : 0 for metric in metrics }
+            variance = { metric["name"] : 0 for metric in metrics }
+            standard_deviation = { metric["name"]: 0 for metric in metrics }
+        elif(len(program_results) > 1):
             mean = { metric["name"]: sum([p_result["metrics"][metric["name"]] for p_result in program_results]) / len(program_results) for metric in metrics }
             squared_differences = { metric["name"] : sum([pow(p_result["metrics"][metric["name"]] - mean[metric["name"]], 2) for p_result in program_results]) for metric in metrics }
             variance = { metric["name"] : squared_differences[metric["name"]] / (len(program_results) - 1) for metric in metrics }
             standard_deviation = { metric["name"]: math.sqrt(variance[metric["name"]]) for metric in metrics }
-            outputs = { f"output[{idx}]": p_result["output"] for idx, p_result in enumerate(program_results) }
 
-            results.append(program | { "repetitions": repetitions, "outputs": outputs, "squared_differences": squared_differences, "standard_deviation": standard_deviation, "variance": variance, "mean": mean, "time_stamp": time_stamp })
+        results.append(program | { "repetitions": repetitions, "outputs": outputs, "squared_differences": squared_differences, "standard_deviation": standard_deviation, "variance": variance, "mean": mean, "time_stamp": time_stamp })
 
     json_dumps = [ json.dumps(result, indent=4, skipkeys=True) + '\n' for result in results ]
     with open("results.json", 'a+') as f:
