@@ -13,6 +13,9 @@ run_03: build_03
 analyse_03: run_03 
 	cd build && $(foreach prog,$(03_progs),gprof $(prog) $(prog).gprof -b >> $(prog).txt;)
 
+lcc: build_03
+	sbatch job.sh
+
 .PHONY: clean
 clean:
 	rm -rf build
