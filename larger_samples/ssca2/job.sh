@@ -13,5 +13,6 @@
 # Enforce exclusive node allocation, do not share with other jobs
 #SBATCH --exclusive
 
-/usr/bin/time /usr/bin/valgrind --tool=massif ./ssca2 17
+# /usr/bin/time /usr/bin/valgrind --tool=massif ./ssca2 17
+/usr/bin/time ./ssca2 17
 
