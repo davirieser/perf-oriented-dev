@@ -1,0 +1,34 @@
+
+HPCS SSCA Graph Analysis Benchmark v2.2
+Running...
+
+SCALE: 17
+
+Scalable Data Generator -- genScalData() beginning execution...
+
+	genScalData() completed execution
+
+Kernel 1 -- computeGraph() beginning execution...
+
+	computeGraph() completed execution
+
+Kernel 2 -- getStartLists() beginning execution...
+
+	getStartLists() completed execution
+
+Max. int wt. list size is 7
+
+Kernel 3 -- findSubGraphs() beginning execution...
+Search from <13182, 109675>, number of vertices visited: 5438
+Search from <32829, 100045>, number of vertices visited: 127
+Search from <33409, 54807>, number of vertices visited: 12946
+Search from <36635, 112892>, number of vertices visited: 1870
+Search from <37070, 31191>, number of vertices visited: 71218
+Search from <78658, 52103>, number of vertices visited: 3486
+Search from <125999, 88322>, number of vertices visited: 6357
+
+	findSubGraphs() completed execution
+
+Kernel 4 -- betweennessCentrality() beginning execution...
+31.76user 0.00system 0:31.89elapsed 99%CPU (0avgtext+0avgdata 27368maxresident)k
+0inputs+8outputs (0major+6060minor)pagefaults 0swaps

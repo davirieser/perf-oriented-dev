@@ -1,0 +1,40 @@
+==185556== Massif, a heap profiler
+==185556== Copyright (C) 2003-2017, and GNU GPL'd, by Nicholas Nethercote
+==185556== Using Valgrind-3.19.0 and LibVEX; rerun with -h for copyright info
+==185556== Command: ./ssca2 17
+==185556== 
+
+HPCS SSCA Graph Analysis Benchmark v2.2
+Running...
+
+SCALE: 17
+
+Scalable Data Generator -- genScalData() beginning execution...
+
+	genScalData() completed execution
+
+Kernel 1 -- computeGraph() beginning execution...
+
+	computeGraph() completed execution
+
+Kernel 2 -- getStartLists() beginning execution...
+
+	getStartLists() completed execution
+
+Max. int wt. list size is 7
+
+Kernel 3 -- findSubGraphs() beginning execution...
+Search from <13182, 109675>, number of vertices visited: 5438
+Search from <32829, 100045>, number of vertices visited: 127
+Search from <33409, 54807>, number of vertices visited: 12946
+Search from <36635, 112892>, number of vertices visited: 1870
+Search from <37070, 31191>, number of vertices visited: 71218
+Search from <78658, 52103>, number of vertices visited: 3486
+Search from <125999, 88322>, number of vertices visited: 6357
+
+	findSubGraphs() completed execution
+
+Kernel 4 -- betweennessCentrality() beginning execution...
+==185556== 
+63.20user 0.11system 1:03.55elapsed 99%CPU (0avgtext+0avgdata 52964maxresident)k
+0inputs+96outputs (0major+10146minor)pagefaults 0swaps
