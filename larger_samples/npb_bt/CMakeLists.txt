@@ -9,12 +9,6 @@ else()
   add_compile_options(-Wall -Wextra -Wno-unknown-pragmas -Wno-unused-parameter)
 endif()
 
-if(CMAKE_COMPILER_IS_GNUCXX)
-  add_definitions(${CMAKE_CXX_FLAGS} "-Ofast")
-  add_definitions(${CMAKE_CXX_FLAGS} "-fno-reorder-functions")
-  add_definitions(${CMAKE_CXX_FLAGS} "-fno-inline")
-endif()
-
 file(GLOB_RECURSE SOURCE_FILES CONFIGURE_DEPENDS src/*.c src/*.h)
 
 link_libraries(m)
