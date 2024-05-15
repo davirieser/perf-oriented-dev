@@ -1,9 +1,15 @@
 
-
-
-
-
 ### B) Data Structure Selection
+
+##### B1) Tracing
+
+Performance Improvement from 5-25% depending on test case (only one case where performance regressed).
+https://github.com/tokio-rs/tracing/pull/580
+The only consideration here was that the original BTreeMap (Map based on a B-Tree) was only created once and then only iterated over.
+Here a Vec (Array) is better since it removes the initialization overhead and improves iteration speed.
+Also this code path seems to only deal with low values of N.
+
+##### B2) rustc
 
 The data structure change is distributed over an issue and 2 pull requests:
 - https://github.com/rust-lang/rust/issues/55514
