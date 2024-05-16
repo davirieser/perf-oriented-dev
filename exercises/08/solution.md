@@ -1,4 +1,11 @@
 
+### A) False Sharing
+
+The given Pull request tries to reduce the amount of false sharing between the shared mutexes of the map.
+It does this by telling the C++ compiler that the SharedMutex Class has an alignment of 64 bytes.
+This means that allocations for instances of this type have to be at least 64 bytes apart.
+64 bytes was probably used as a sensible default value that will work on 99% of architectures, although it could waste memory on systems with smaller cache line size.
+
 ### B) Data Structure Selection
 
 ##### B1) Tracing
