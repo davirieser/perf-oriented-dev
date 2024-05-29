@@ -1,9 +1,22 @@
 
+### A) False Sharing
 
-
-
+The given Pull request tries to reduce the amount of false sharing between the shared mutexes of the map.
+It does this by telling the C++ compiler that the SharedMutex Class has an alignment of 64 bytes.
+This means that allocations for instances of this type have to be at least 64 bytes apart.
+64 bytes was probably used as a sensible default value that will work on 99% of architectures, although it could waste memory on systems with smaller cache line size.
 
 ### B) Data Structure Selection
+
+##### B1) Tracing
+
+Performance Improvement from 5-25% depending on test case (only one case where performance regressed).
+https://github.com/tokio-rs/tracing/pull/580
+The only consideration here was that the original BTreeMap (Map based on a B-Tree) was only created once and then only iterated over.
+Here a Vec (Array) is better since it removes the initialization overhead and improves iteration speed.
+Also this code path seems to only deal with low values of N.
+
+##### B2) rustc
 
 The data structure change is distributed over an issue and 2 pull requests:
 - https://github.com/rust-lang/rust/issues/55514
