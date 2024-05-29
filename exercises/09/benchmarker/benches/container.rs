@@ -798,7 +798,6 @@ fn benchmark_eight_mega_byte_list(l: &mut LinkedList<[u64; 1024]>, inst_mix: Per
 }
 
 pub fn benchmark_lists(c: &mut Criterion) {
-    /*
     for n in [10usize, 1000, 100000, 10000000].iter() {
         let group_name = format!("Array/Size 8/Elements {n}");
         let mut group = c.benchmark_group(group_name);
@@ -839,9 +838,7 @@ pub fn benchmark_lists(c: &mut Criterion) {
         }
         group.finish();
     }
-    */
 
-    /*
     for n in [10usize, 1000].iter() {
         let group_name = format!("Array/Size 8192/Elements {n}");
         let mut group = c.benchmark_group(group_name);
@@ -851,6 +848,7 @@ pub fn benchmark_lists(c: &mut Criterion) {
             Percentage::Ten,
             Percentage::Fifty,
         ] {
+            if *n == 100000 && p == Percentage::Fifty { return ;}
             group.bench_with_input(BenchmarkId::new("Array", p), n, |b, i| {
                 let mut arr = vec![[0; 1024]; i + 1];
                 b.iter(|| {
@@ -860,8 +858,8 @@ pub fn benchmark_lists(c: &mut Criterion) {
         }
         group.finish();
     }
-    */
-    for n in [10usize, 1000, 100000, 10000000].iter() {
+
+    for n in [10usize, 1000, 100000].iter() {
         let group_name = format!("List/Size 8/Elements {n}");
         let mut group = c.benchmark_group(group_name);
         for p in [
@@ -891,7 +889,7 @@ pub fn benchmark_lists(c: &mut Criterion) {
         group.finish();
     }
 
-    for n in [10usize, 1000].iter() {
+    for n in [10usize, 1000, 100000].iter() {
         let group_name = format!("List/Size 512/Elements {n}");
         let mut group = c.benchmark_group(group_name);
         for p in [
@@ -918,7 +916,7 @@ pub fn benchmark_lists(c: &mut Criterion) {
         group.finish();
     }
 
-    for n in [10usize, 1000].iter() {
+    for n in [10usize, 1000, 100000].iter() {
         let group_name = format!("List/Size 8192/Elements {n}");
         let mut group = c.benchmark_group(group_name);
         for p in [
