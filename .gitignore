@@ -12,3 +12,5 @@ tools/build_debug
 tools/build_release
 generated/
 results.json
+target/
+
