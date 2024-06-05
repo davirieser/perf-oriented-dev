@@ -56,7 +56,9 @@
 ### C) Code Understanding
 
 - LUA_USE_JUMPTABLE is a Compile Flag that is enabled in GCC by default.
+
   If it is set it imports the `ljumptab.h` on line 1153 of `lvm.c`.
+
   This import converts the giant switch case in `lvm.c` on line 1183 to the 1896 into a giant label table and `goto` statements by redefining the `vmdispatch` and `vmcase` macros.
 
 ### D) Optimization
