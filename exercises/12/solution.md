@@ -1,10 +1,36 @@
 
 ### A) Setup and Basic Execution
 
+##### GCC - No Jump Table
+
 ```
-100      x fibonacci_naive(30)     time:  14.2116 s  --  832040
-10000000 x fibonacci_tail(30)      time:  12.2245 s  --  832040
-25000000 x fibonacci_iter(30)      time:  12.0391 s  --  832040
+100      x fibonacci_naive(30) time:  13.0095 s  --  832040
+10000000 x fibonacci_tail(30)  time:  12.8127 s  --  832040
+25000000 x fibonacci_iter(30)  time:  11.7029 s  --  832040
+```
+
+##### GCC - With Jump Table
+
+```
+100      x fibonacci_naive(30) time:  12.9171 s  --  832040
+10000000 x fibonacci_tail(30)  time:  12.6853 s  --  832040
+25000000 x fibonacci_iter(30)  time:  10.9147 s  --  832040
+```
+
+##### Clang - No Jump Table
+
+```
+100      x fibonacci_naive(30) time:  14.4256 s  --  832040
+10000000 x fibonacci_tail(30)  time:  13.9045 s  --  832040
+25000000 x fibonacci_iter(30)  time:  12.8259 s  --  832040
+```
+
+##### Clang - With Jump Table
+
+```
+100      x fibonacci_naive(30) time:  14.1838 s  --  832040
+10000000 x fibonacci_tail(30)  time:  13.5195 s  --  832040
+25000000 x fibonacci_iter(30)  time:  12.8535 s  --  832040
 ```
 
 ### B) Profiling
