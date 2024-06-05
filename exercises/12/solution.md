@@ -55,6 +55,11 @@
 
 ### C) Code Understanding
 
+- Major Phases of Lua Interpreter:
+  - Lexing `llex.c`
+  - Parsing `lparser.c`
+  - Execution `lua_pcallk` in `lua.c`
+
 - LUA_USE_JUMPTABLE is a Compile Flag that is enabled in GCC by default.
 
   If it is set it imports the `ljumptab.h` on line 1153 of `lvm.c`.
