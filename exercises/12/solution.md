@@ -56,6 +56,7 @@
 ### C) Code Understanding
 
 - Major Phases of Lua Interpreter:
+  - Command Line Argument Parsing `lua.c` or `luac.c` 
   - Lexing `llex.c`
   - Parsing `lparser.c`
   - Execution `lua_pcallk` in `lua.c`
