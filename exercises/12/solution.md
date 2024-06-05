@@ -33,6 +33,22 @@
 25000000 x fibonacci_iter(30)  time:  12.8535 s  --  832040
 ```
 
+##### GCC 8 - No Jump Table 
+
+```
+100 x fibonacci_naive(30)     time:  13.3761 s  --  832040
+10000000 x fibonacci_tail(30) time:  12.3656 s  --  832040
+25000000 x fibonacci_iter(30) time:  11.8834 s  --  832040
+```
+
+##### GCC 8 - With Jump Table 
+
+```
+100 x fibonacci_naive(30)     time:  13.2953 s  --  832040
+10000000 x fibonacci_tail(30) time:  12.2686 s  --  832040
+25000000 x fibonacci_iter(30) time:  12.0594 s  --  832040
+```
+
 ### B) Profiling
 
 
