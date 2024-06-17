@@ -107,6 +107,25 @@ Ir                       file:function
    550,000,044 ( 0.59%)  /home/cb76/cb761226/perf-oriented-dev/exercises/12/lua-5.4.6/src/lvm.c:luaV_tointeger
 ```
 
+##### Results
+
+According to the measurements the following functions should be optimized for each variant:
+- Naive:
+  - luaH_getshortstr
+  - luaD_precall
+  - luaV_execute
+- Tail
+  - luaD_pretailcall
+  - luaV_execute
+  - malloc/realloc/free
+  - luaD_precall
+  - luaD_precall
+- Iterative
+  - luaV_execute
+  - luaD_precall
+  - luaD_precall
+  - luaV_tointeger
+
 ##### Result Quality
 
 The result is sufficient to decide optimization decisions on, as it shows the hottest functions, where they are executed and how much time they each take.
