@@ -56,6 +56,7 @@ We seperated each fibonacci variant into a seperate file and removed the measuri
 
 Cachegrind measures the amount of operations a program has to do instead of how long the program takes to get more reliable results.
 Using `cg_annotate` you can display the results.
+It also shows the lines which are the hottest which is pretty cool, but is really verbose and will thus be omitted from the output here.
 
 ###### Naive
 
@@ -108,7 +109,7 @@ Ir                      I1mr        ILmr        Dr                      D1mr    
 
 ##### Result Quality
 
-The result is sufficient to decide optimization decisions on, as it clearly shows all the hot functions, where they are executed and how much time they each take.
+The result is sufficient to decide optimization decisions on, as it shows the hottest functions, where they are executed and how much time they each take.
 Because the benchmarks were done seperately for each fibonnaci variant we also know which functions are important for which variant.
 Since this is theoretically only simulated, optimizing branches is not possible but would not really be viable for an interpreter anyway.
 
