@@ -57,9 +57,12 @@ We seperated each fibonacci variant into a seperate file and removed the measuri
 Cachegrind measures the amount of operations a program has to do instead of how long the program takes to get more reliable results.
 Using `cg_annotate` you can display the results.
 
-####### Naive
+###### Naive
 
 ```
+--------------------------------------------------------------------------------
+Ir                       file:function
+--------------------------------------------------------------------------------
 59,148,312,271 (75.13%)  /home/cb76/cb761226/perf-oriented-dev/exercises/12/lua-5.4.6/src/lvm.c:luaV_execute
 15,500,936,460 (19.69%)  /home/cb76/cb761226/perf-oriented-dev/exercises/12/lua-5.4.6/src/ldo.c:luaD_precall
  4,079,196,149 ( 5.18%)  /home/cb76/cb761226/perf-oriented-dev/exercises/12/lua-5.4.6/src/ltable.c:luaH_getshortstr
@@ -68,6 +71,9 @@ Using `cg_annotate` you can display the results.
 ###### Tail
 
 ```
+--------------------------------------------------------------------------------
+Ir                      I1mr             ILmr        Dr                      D1mr             DLmr         Dw                     D1mw             DLmw          file:function
+--------------------------------------------------------------------------------
 67,091,792,728 (63.77%) 357,202 (39.88%) 60 ( 2.73%) 12,560,537,047 (55.15%) 357,148 (33.58%)   8 ( 0.30%) 4,770,536,231 (40.86%)       4 ( 0.00%)   0           /home/cb76/cb761226/perf-oriented-dev/exercises/12/lua-5.4.6/src/lvm.c:luaV_execute
 29,450,002,945 (27.99%)       5 ( 0.00%)  5 ( 0.23%)  7,750,000,775 (34.03%)       0            0          5,580,000,558 (47.79%)       0            0           /home/cb76/cb761226/perf-oriented-dev/exercises/12/lua-5.4.6/src/ldo.c:luaD_pretailcall
  1,693,777,998 ( 1.61%)      23 ( 0.00%) 15 ( 0.68%)    475,007,958 ( 2.09%)  13,933 ( 1.31%)   0            201,253,533 ( 1.72%)       1 ( 0.00%)   0           ???:_int_free
@@ -91,6 +97,9 @@ Using `cg_annotate` you can display the results.
 ###### Iterative
 
 ```
+--------------------------------------------------------------------------------
+Ir                      I1mr        ILmr        Dr                      D1mr           DLmr         Dw                     D1mw         DLmw          file:function
+--------------------------------------------------------------------------------
 96,675,004,176 (97.26%) 45 ( 1.73%) 45 ( 2.11%) 17,925,000,795 (95.47%)     6 ( 0.15%)   6 ( 0.23%) 8,550,000,383 (95.80%)   4 ( 0.30%)   0           /home/cb76/cb761226/perf-oriented-dev/exercises/12/lua-5.4.6/src/lvm.c:luaV_execute
  1,425,000,851 ( 1.43%) 13 ( 0.50%)  9 ( 0.42%)    425,000,262 ( 2.26%)     1 ( 0.02%)   0            300,000,225 ( 3.36%)   1 ( 0.08%)   0           /home/cb76/cb761226/perf-oriented-dev/exercises/12/lua-5.4.6/src/ldo.c:luaD_precall
    750,000,261 ( 0.75%)  0           0             300,000,098 ( 1.60%)     4 ( 0.10%)   0                      0            0            0           /home/cb76/cb761226/perf-oriented-dev/exercises/12/lua-5.4.6/src/ltable.c:luaH_getshortstr
