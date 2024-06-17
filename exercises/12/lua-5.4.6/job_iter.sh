@@ -13,5 +13,5 @@
 # Enforce exclusive node allocation, do not share with other jobs
 #SBATCH --exclusive
 
-valgrind --tool=cachegrind --cachegrind-out-file=fib_iter.cg ./src/lua ./fib_iter.lua
+valgrind --cache-sim=no --branch-sim=no --tool=cachegrind --cachegrind-out-file=fib_iter.cg ./src/lua ./fib_iter.lua
 
