@@ -73,7 +73,7 @@ Ir                       file:function
 
 ```
 --------------------------------------------------------------------------------
-Ir                      I1mr             ILmr        Dr                      D1mr             DLmr         Dw                     D1mw             DLmw          file:function
+Ir                       file:function
 --------------------------------------------------------------------------------
 61,221,434,975 (61.63%)  /home/cb76/cb761226/perf-oriented-dev/exercises/12/lua-5.4.6/src/lvm.c:luaV_execute
 29,450,002,945 (29.64%)  /home/cb76/cb761226/perf-oriented-dev/exercises/12/lua-5.4.6/src/ldo.c:luaD_pretailcall
@@ -99,7 +99,7 @@ Ir                      I1mr             ILmr        Dr                      D1m
 
 ```
 --------------------------------------------------------------------------------
-Ir                      I1mr        ILmr        Dr                      D1mr           DLmr         Dw                     D1mw         DLmw          file:function
+Ir                       file:function
 --------------------------------------------------------------------------------
 91,225,003,934 (97.10%)  /home/cb76/cb761226/perf-oriented-dev/exercises/12/lua-5.4.6/src/lvm.c:luaV_execute
  1,425,000,851 ( 1.52%)  /home/cb76/cb761226/perf-oriented-dev/exercises/12/lua-5.4.6/src/ldo.c:luaD_precall
