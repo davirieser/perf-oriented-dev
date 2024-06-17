@@ -1,7 +1,7 @@
 
 ### A) Setup and Basic Execution
 
-##### GCC - No Jump Table
+##### GCC 12.2 - No Jump Table
 
 ```
 100      x fibonacci_naive(30) time:  13.0095 s  --  832040
@@ -9,7 +9,7 @@
 25000000 x fibonacci_iter(30)  time:  11.7029 s  --  832040
 ```
 
-##### GCC - With Jump Table
+##### GCC 12.2 - With Jump Table
 
 ```
 100      x fibonacci_naive(30) time:  12.9171 s  --  832040
@@ -17,7 +17,7 @@
 25000000 x fibonacci_iter(30)  time:  10.9147 s  --  832040
 ```
 
-##### Clang - No Jump Table
+##### Clang 15 - No Jump Table
 
 ```
 100      x fibonacci_naive(30) time:  14.4256 s  --  832040
@@ -25,7 +25,7 @@
 25000000 x fibonacci_iter(30)  time:  12.8259 s  --  832040
 ```
 
-##### Clang - With Jump Table
+##### Clang 15 - With Jump Table
 
 ```
 100      x fibonacci_naive(30) time:  14.1838 s  --  832040
@@ -33,7 +33,7 @@
 25000000 x fibonacci_iter(30)  time:  12.8535 s  --  832040
 ```
 
-##### GCC 8 - No Jump Table 
+##### GCC 8.5 - No Jump Table 
 
 ```
 100 x fibonacci_naive(30)     time:  13.3761 s  --  832040
@@ -41,7 +41,7 @@
 25000000 x fibonacci_iter(30) time:  11.8834 s  --  832040
 ```
 
-##### GCC 8 - With Jump Table 
+##### GCC 8.5 - With Jump Table 
 
 ```
 100 x fibonacci_naive(30)     time:  13.2953 s  --  832040
